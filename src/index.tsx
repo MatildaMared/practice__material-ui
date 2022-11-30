@@ -10,6 +10,8 @@ import { Functions } from "@mui/icons-material";
 import Hosting from "./pages/Hosting/Hosting";
 import Storage from "./pages/Storage/Storage";
 import MachineLearning from "./pages/MachineLearning/MachineLearning";
+import { ThemeProvider } from "@mui/material";
+import dashboardTheme from "./dashboardTheme";
 
 const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement
@@ -17,18 +19,19 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<App />}>
-					<Route path="authentication" element={<Authentication />} />
-					<Route path="database" element={<Database />} />
-					<Route path="functions" element={<Functions />} />
-					<Route path="hosting" element={<Hosting />} />
-					<Route path="machine-learning" element={<MachineLearning />} />
-					<Route path="storage" element={<Storage />} />
-				</Route>
-			</Routes>
+			<ThemeProvider theme={dashboardTheme}>
+				<Routes>
+					<Route path="/" element={<App />}>
+						<Route path="authentication" element={<Authentication />} />
+						<Route path="database" element={<Database />} />
+						<Route path="functions" element={<Functions />} />
+						<Route path="hosting" element={<Hosting />} />
+						<Route path="machine-learning" element={<MachineLearning />} />
+						<Route path="storage" element={<Storage />} />
+					</Route>
+				</Routes>
+			</ThemeProvider>
 		</BrowserRouter>
-		,
 	</React.StrictMode>
 );
 
