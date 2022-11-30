@@ -1,7 +1,12 @@
+import { Grid } from "@mui/material";
 import React from "react";
 
 function Storage() {
-	return <div>Storage</div>;
+	return (
+		<Grid item xs={8}>
+			Storage
+		</Grid>
+	);
 }
 
 export default Storage;

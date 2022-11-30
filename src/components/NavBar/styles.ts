@@ -19,7 +19,7 @@ export const navbarStyles = {
 	text: {
 		"& span": {
 			marginLeft: "-10px",
-			fontWeight: "600",
+			fontWeight: "500",
 			fontSize: "16px",
 		},
 	},
